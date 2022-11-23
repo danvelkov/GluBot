@@ -16,9 +16,20 @@ module.exports = {
         const proxyURL = attachment.proxyURL
         // console.log("response " + String(await pythonCall(url)))
 		// await interaction.reply({content: name + " " + url + " " + proxyURL, ephemeral:true});
-        await interaction.reply({content: String(await pythonCall(url)), ephemeral:true});
+
+        // await interaction.reply({content: String(await pythonCall(url)), ephemeral:true});
+        // await interaction.deferReply();
+        // const result = await reply();
+        // await interaction.editReply(result);
+        await interaction.reply({content: 'Working on it', ephemeral:true});
+        const result = await pythonCall(url);
+        await interaction.followUp({content: String(result), ephemeral:true});
 	},
 };
+
+// async function reply(result) {
+//     await interaction.reply({content: String(result), ephemeral:true});
+// }
 
 function pythonCall(file){
     return new Promise(resolve => {
