@@ -17,6 +17,8 @@ for (const file of commandFiles) {
 	client.commands.set(command.data.name, command);
 }
 
+// EVENTS
+
 client.once(Events.ClientReady, () => {
 	console.log('Ready!');
 });
