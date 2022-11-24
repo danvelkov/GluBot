@@ -11,13 +11,21 @@ module.exports = {
             .setDescription("The image to dither")),
 	async execute(interaction) {
         const attachment = interaction.options.getAttachment("csv_file")
-        // const name = attachment.name
+        const name = attachment.name
         // const proxyURL = attachment.proxyURL
+        
+        var re = /(?:\.([^.]+))?$/;
+        var ext = re.exec(name)[1];
+
+        if(ext == "csv"){
         const url = attachment.url
 
         await interaction.reply({content: 'Working on it', ephemeral:true});
         const result = await pythonCall(url);
         await interaction.followUp({content: result.join("\n"), ephemeral:true});
+        } else {
+          await interaction.reply({content: 'File is not .csv\nPlease upload a .csv file!', ephemeral:true});
+        }
 	},
 };
 

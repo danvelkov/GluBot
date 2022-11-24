@@ -1,0 +1,10 @@
+print("How to prevent high blood glucose levels?")
+print("1. Take any diabetes medicine you've been prescribed, as advised by your doctor or care team.")
+print("2. Avoid eating too much sugary or starchy food.")
+print("3. Try to find ways to manage stress.")
+print("4. Exercise regularly.")
+print("5. Lose weight, if you are overweight.")
+print("6. Follow advice from your doctor or care team about what to do while you're ill (sometimes called 'sick day rules').")
+print("7. Speak to your care team or GP if you've tried to lower your blood sugar, but your blood sugar level is still high or you still have symptoms.")
+print("Source: NHS")
+
